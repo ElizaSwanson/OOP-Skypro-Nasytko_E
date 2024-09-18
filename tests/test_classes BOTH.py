@@ -12,10 +12,6 @@ def f_c():
 def f_p():
     return Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
 
-@pytest.fixture
-def new():
-    return Product("Снайпер", "Автобиография самого смертоносного снайпера", 400,4300,)
-
 
 def test_category(f_c):
     assert f_c.name == "Книга"
@@ -31,6 +27,13 @@ def test_prod(f_p):
     assert f_p.quantity == 100
 
 def test_new_product():
+    new = Product("Снайпер",
+            "Автобиография самого смертоносного снайпера",
+            400,
+            300
+        )
+    new.price = 0
+    assert new.price == 400
     new.price = 500
     assert new.price == 500
 

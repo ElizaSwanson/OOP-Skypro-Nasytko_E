@@ -7,7 +7,7 @@
 
 ## Как скачать:
 Пропишите в командной строке PyCharm ```git clone https://github.com/ElizaSwanson/SkyHomework_card.git```
-А затем пропишите ```pip install -r requirements.txt```
+А затем пропишите ```pip install -r pyproject.toml```
 
 ## Зависимости:
 - flake8 = "^7.1.1"

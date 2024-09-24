@@ -8,6 +8,8 @@ from src.product_class import Product
 def f_p():
     return Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
 
+str_test = Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
+
 
 def test_prod(f_p):
     assert f_p.name == "Новелла"
@@ -26,6 +28,9 @@ def test_new_product():
     assert new.price == 400
     new.price = 500
     assert new.price == 500
+
+def test_str():
+    assert str(str_test) == "Новелла, 550 руб. Остаток: 100 шт."
 
 
 if __name__ == "__main__":

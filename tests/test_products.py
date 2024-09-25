@@ -3,19 +3,14 @@ import pytest
 from src.product_class import Product
 
 
-@pytest.fixture
-def f_p():
-    return Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
-
-
 str_test = Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
 
 
-def test_prod(f_p):
-    assert f_p.name == "Новелла"
-    assert f_p.description == "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!"
-    assert f_p.price == 550
-    assert f_p.quantity == 100
+def test_prod():
+    assert str_test.name == "Новелла"
+    assert str_test.description == "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!"
+    assert str_test.price == 550
+    assert str_test.quantity == 100
 
 
 def test_new_product():
@@ -28,6 +23,12 @@ def test_new_product():
 
 def test_str():
     assert str(str_test) == "Новелла, 550 руб. Остаток: 100 шт."
+
+sniper = Product("Снайпер", "Крутое чтиво", 550, 100)
+elven_lied = Product("Elven lied", "Manga", 700, 10)
+
+def test_add():
+    assert sniper + elven_lied == "Всего товаров на сумму: 62000"
 
 
 if __name__ == "__main__":

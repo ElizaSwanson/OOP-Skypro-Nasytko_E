@@ -3,7 +3,9 @@ import pytest
 from src.category_class import Category
 from src.product_class import Product
 
-category_test = Category("Книга", "Книги - источник знаний!", ["Эльфийская песнь"])
+sniper = Product("Снайпер", "Крутое чтиво", 550, 100)
+elven_lied = Product("Elven lied", "Manga", 700, 10)
+category_test = Category("Книга", "Книги - источник знаний!", [elven_lied])
 
 
 @pytest.fixture
@@ -23,7 +25,7 @@ def test_category(f_c):
 
 
 def test_str():
-    assert str(category_test) == "Книга, количество продуктов: 2"
+    assert str(category_test) == "Книга, количество продуктов: 10"
 
 
 if __name__ == "__main__":

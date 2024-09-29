@@ -24,8 +24,10 @@ def test_new_product():
 def test_str():
     assert str(str_test) == "Новелла, 550 руб. Остаток: 100 шт."
 
+
 sniper = Product("Снайпер", "Крутое чтиво", 550, 100)
 elven_lied = Product("Elven lied", "Manga", 700, 10)
+
 
 def test_add():
     assert sniper + elven_lied == "Всего товаров на сумму: 62000"

@@ -1,6 +1,8 @@
 from src.product_class import Product
 
+
 class LawnGrass(Product):
+
 
     def __init__(self, name: str, description: str, price: float, quantity: int, country: str, germination_period: str, color: str):
         super().__init__(name, description, price, quantity)

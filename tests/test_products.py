@@ -30,7 +30,7 @@ elven_lied = Product("Elven lied", "Manga", 700, 10)
 
 
 def test_add():
-    assert sniper + elven_lied == "Всего товаров на сумму: 62000"
+    assert sniper + elven_lied == 62000
 
 
 if __name__ == "__main__":

@@ -21,5 +21,8 @@ def test_info():
     assert smartphone1.memory == 256
     assert smartphone1.color == "Серый"
 
+def test_error():
+    assert smartphone1 + 1 == TypeError
+
 if __name__ == "__main__":
     pytest.main()

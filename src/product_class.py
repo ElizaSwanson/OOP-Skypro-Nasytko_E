@@ -22,15 +22,8 @@ class Product:
             self.__price = value
 
     @classmethod
-    def new_product(cls, product_data):
-        name = product_data.get("name")
-        description = product_data.get("description")
-        price = product_data.get("price")
-        quantity = product_data.get("quantity")
-        return cls(name, description, price, quantity)
-
-    def __repr__(self):
-        return f"Product(name='{self.name}', description='{self.description}', price={self.price}, quantity={self.quantity})"
+    def new_product(cls, product_data: dict) -> "Product":
+        return cls(**product_data)
 
     def __str__(self):
         return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
@@ -40,5 +33,4 @@ class Product:
             price_1 = self.__price * self.quantity
             price_2 = other.__price * other.quantity
             return price_1 + price_2
-        else:
-            return TypeError
+        raise TypeError

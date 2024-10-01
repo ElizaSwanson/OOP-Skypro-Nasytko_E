@@ -2,7 +2,6 @@ import pytest
 
 from src.product_class import Product
 
-
 str_test = Product("Новелла", "САМОЕ КРУТОЕ ЧТО ТЫ ЧИТАЛ!!!", 550, 100)
 
 

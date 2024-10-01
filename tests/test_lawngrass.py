@@ -1,6 +1,7 @@
+import pytest
+
 from src.lawngrass_class import LawnGrass
 from src.smartphone_class import Smartphone
-import pytest
 
 grass1 = LawnGrass(
     "Газонная трава",

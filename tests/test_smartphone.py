@@ -1,4 +1,5 @@
 import pytest
+
 from src.smartphone_class import Smartphone
 
 smartphone1 = Smartphone(
@@ -15,14 +16,17 @@ smartphone2 = Smartphone(
     "Iphone 15", "512GB, Gray space", 210000.0, 8, 98.2, "15", 512, "Gray space"
 )
 
+
 def test_info():
     assert smartphone1.efficiency == 95.5
     assert smartphone1.model == "S23 Ultra"
     assert smartphone1.memory == 256
     assert smartphone1.color == "Серый"
 
+
 def test_error():
     assert smartphone1 + 1 == TypeError
+
 
 if __name__ == "__main__":
     pytest.main()

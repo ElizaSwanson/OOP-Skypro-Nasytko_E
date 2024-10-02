@@ -25,7 +25,8 @@ def test_info():
 
 
 def test_error():
-    assert smartphone1 + 1 == TypeError
+    with pytest.raises(TypeError):
+        smartphone1 + 1
 
 
 if __name__ == "__main__":

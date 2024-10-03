@@ -1,4 +1,4 @@
-class MixinPrint():
+class MixinPrint:
 
     def __init__(self):
         print(repr(self))

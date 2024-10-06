@@ -32,5 +32,12 @@ def test_add():
     assert sniper + elven_lied == 62000
 
 
+def test_zero_quantity():
+    with pytest.raises(ValueError) as e:
+        Product("Снайпер", "Крутое чтиво", 550, 0)
+
+    assert str(e.value) == "Товар с нулевым количеством не может быть добавлен"
+
+
 if __name__ == "__main__":
     pytest.main()

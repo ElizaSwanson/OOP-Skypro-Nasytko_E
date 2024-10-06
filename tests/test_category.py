@@ -28,5 +28,18 @@ def test_str():
     assert str(category_test) == "Книга, количество продуктов: 10"
 
 
+def test_middle_sum():
+    assert (
+        Category(
+            "Книга", "Книги - источник знаний!", [elven_lied, sniper]
+        ).middle_price()
+        == 625.0
+    )
+
+
+def test_zero_mid_sum():
+    assert Category("Книги", "Нужно читать", []).middle_price() == 0.0
+
+
 if __name__ == "__main__":
     pytest.main()

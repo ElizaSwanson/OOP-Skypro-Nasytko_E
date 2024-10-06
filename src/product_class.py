@@ -14,6 +14,8 @@ class Product(BaseProduct, MixinPrint):
         self.__price = price
         self.quantity = quantity
         super().__init__()
+        if quantity == 0:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
 
     @property
     def price(self):
